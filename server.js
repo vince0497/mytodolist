@@ -14,7 +14,7 @@ var app = express();
 //https://todolistbrincel.herokuapp.com/
 app.use(
   cors({
-    origin: "https://todolistbrincel.herokuapp.com",
+    origin: "http://localhost:3000",
     credentials: true
   })
 );
