@@ -14,7 +14,7 @@ var app = express();
 //https://todolistbrincel.herokuapp.com/
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://todolistbrincel.herokuapp.com",
     credentials: true
   })
 );
@@ -22,7 +22,7 @@ app.use(
 
 
 //View Engine
-app.set("views", path.join(__dirname, "client/public"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.engine("html", require("ejs").renderFile);
 
