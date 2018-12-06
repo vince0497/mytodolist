@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getList = () => {
   return axios
-    .get("http://localhost:5000/api/tasks", {
+    .get("https://brincellopeztodolist.herokuapp.com/api/tasks", {
       headers: { "Content-Type": "application/json" }
     })
     .then(res => {
@@ -16,7 +16,7 @@ export const getList = () => {
 export const addToList = term => {
   return axios
     .post(
-      "http://localhost:5000/api/task",
+      "https://brincellopeztodolist.herokuapp.com/api/task",
       {
         title: term,
         isDone: false
@@ -32,7 +32,7 @@ export const addToList = term => {
 
 export const deleteItem = term => {
   axios
-    .delete(`http://localhost:5000/api/task/${term}`, {
+    .delete(`https://brincellopeztodolist.herokuapp.com/api/task/${term}`, {
       headers: { "Content-Type": "application/json" }
     })
     .then(function(response) {
@@ -46,7 +46,7 @@ export const deleteItem = term => {
 export const updateItem = (term, id) => {
   return axios
     .put(
-      `http://localhost:5000/api/task/${id}`,
+      `https://brincellopeztodolist.herokuapp.com/api/task/${id}`,
       {
         title: term,
         isDone: false
