@@ -78,7 +78,7 @@ class List extends Component {
       <div className="col-md-12">
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Task Name</label>
+            <label htmlFor="exampleInputEmail1">Your Task</label>
             <div className="row">
               <div className="col-md-9">
                 <input
@@ -94,7 +94,7 @@ class List extends Component {
                   className="btn btn-primary"
                   onClick={this.onUpdate.bind(this)}
                 >
-                  Update
+                  Update Task
                 </button>
               </div>
             </div>
@@ -104,7 +104,7 @@ class List extends Component {
             onClick={this.onSubmit.bind(this)}
             className="btn btn-success btn-block"
           >
-            Submit
+            Add Task
           </button>
         </form>
         <table className="table">
